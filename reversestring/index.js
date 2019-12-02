@@ -61,12 +61,23 @@
 // }
 
 // Solution 6 (for of)
-const reverse = str => {
-  let reverseStr = '';
+// const reverse = str => {
+//   let reverseStr = '';
 
-  for (const char of str) {
-    reverseStr = char + reverseStr;
-  }
+//   for (const char of str) {
+//     reverseStr = char + reverseStr;
+//   }
+
+//   return reverseStr;
+// }
+
+// Solution 7 (reduce)
+const reverse = str => {
+  const strArray = str.split('');
+
+  let reverseStr = strArray.reduce((acc, val) => {
+    return val + acc;
+  })
 
   return reverseStr;
 }
