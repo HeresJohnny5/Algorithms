@@ -75,11 +75,7 @@
 const reverse = str => {
   const strArray = str.split('');
 
-  let reverseStr = strArray.reduce((acc, val) => {
-    return val + acc;
-  })
-
-  return reverseStr;
+  return strArray.reduce((acc, val) => val + acc);
 }
 
 module.exports = reverse;
