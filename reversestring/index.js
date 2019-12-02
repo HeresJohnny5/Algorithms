@@ -12,12 +12,26 @@
 // }
 
 // Solution 2
+// const reverse = str => {
+//   const strArray = str.split('');
+//   let reverseStr = '';
+
+//   while (strArray.length > 0) {
+//     reverseStr += strArray.pop();
+//   }
+
+//   return reverseStr;
+// }
+
+// Solution 3
+// Solution 3
 const reverse = str => {
-  const strArray = str.split('');
+  let counter = 1;
   let reverseStr = '';
 
-  while (strArray.length > 0) {
-    reverseStr += strArray.pop();
+  while (counter <= str.length) {
+    reverseStr += str[str.length - counter];
+    counter++;
   }
 
   return reverseStr;
