@@ -24,14 +24,26 @@
 // }
 
 // Solution 3
-// Solution 3
+// const reverse = str => {
+//   let counter = 1;
+//   let reverseStr = '';
+
+//   while (counter <= str.length) {
+//     reverseStr += str[str.length - counter];
+//     counter++;
+//   }
+
+//   return reverseStr;
+// }
+
+// Solution 4
+// Solution 4
 const reverse = str => {
-  let counter = 1;
+  const strArray = str.split('');
   let reverseStr = '';
 
-  while (counter <= str.length) {
-    reverseStr += str[str.length - counter];
-    counter++;
+  for (let i = 1; i <= strArray.length; i++) {
+    reverseStr += strArray[strArray.length - i];
   }
 
   return reverseStr;
