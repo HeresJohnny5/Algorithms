@@ -37,14 +37,25 @@
 // }
 
 // Solution 4
-// Solution 4
+// const reverse = str => {
+//   const strArray = str.split('');
+//   let reverseStr = '';
+
+//   for (let i = 1; i <= strArray.length; i++) {
+//     reverseStr += strArray[strArray.length - i];
+//   }
+
+//   return reverseStr;
+// }
+
+// Solution 5
 const reverse = str => {
   const strArray = str.split('');
   let reverseStr = '';
 
-  for (let i = 1; i <= strArray.length; i++) {
-    reverseStr += strArray[strArray.length - i];
-  }
+  strArray.forEach((char, index) => {
+    reverseStr += strArray[strArray.length - (index + 1)];
+  })
 
   return reverseStr;
 }
