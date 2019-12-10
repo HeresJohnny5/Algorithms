@@ -5,6 +5,7 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
+// Solution 1
 const maxChar = str => {
   const lowerCaseStr = str.toLowerCase();
   let tempArr = [];
