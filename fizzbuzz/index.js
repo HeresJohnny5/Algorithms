@@ -12,6 +12,7 @@
 //   4
 //   buzz
 
+// Solution 1
 const fizzBuzz = n => {
   let counter = 1;
 
