@@ -4,7 +4,6 @@
 // Find the sum of all the multiples of 3 or 5 below 1000 = 233168.
 
 // Solution 1
-
 const multiplesOf3And5 = ([num1, num2], total) => {
   [num1, num2] = [num1, num2];
   let counter = 1;
