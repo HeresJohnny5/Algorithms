@@ -6,7 +6,17 @@
 //   defangedIPAddress("255.100.50.0") === "255[.]100[.]50[.]0"
 
 const defangedIPAddress = (nums) => {
+  newNums = [];
 
+  nums.split('').forEach(char => {
+    if (char === '.') {
+      newNums.push('[.]');
+    } else {
+      newNums.push(char);
+    }
+  });
+
+  return newNums.join('');
 }
 
 module.exports = defangedIPAddress;
