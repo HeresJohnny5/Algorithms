@@ -4,8 +4,16 @@
 //   subtractProductAndSum(234) === 15
 //   subtractProductAndSum(4421) === 21
 
-const defangedIPAddress = (nums) => {
+const subtractProductAndSum = (nums) => {
+  let product = 0;
+  let sum = 0;
 
+  nums.toString().split('').forEach(num => {
+    product *= num;
+    sum += parseInt(num);
+  });
+
+  return product - sum;
 }
 
-module.exports = defangedIPAddress;
+module.exports = subtractProductAndSum;
