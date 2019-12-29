@@ -7,7 +7,10 @@
 //   jewelsAndStones('z', 'ZZ') === 0
 
 const jewelsAndStones = (jewels, stones) => {
+  const jewelsArray = jewels.split('');
+  const stonesArray = stones.split('');
 
+  return stonesArray.filter(stone => jewelsArray.includes(stone)).length;
 }
 
 module.exports = jewelsAndStones;
