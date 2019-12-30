@@ -6,7 +6,21 @@
 // Output = [18,6,6,6,1,-1]
 
 const replaceElementsWithGreatestElementOnRight = (array) => {
+  let newArray = [];
+  let maxValue = 0;
 
+  for (let i = array.length - 1; i > 0; i--) {
+    if (array[i] > maxValue) {
+      maxValue = array[i];
+
+      newArray.unshift(maxValue);
+    } else {
+      newArray.unshift(maxValue);
+    }
+  }
+
+  newArray.push(-1);
+  return newArray;
 }
 
 module.exports = replaceElementsWithGreatestElementOnRight;
